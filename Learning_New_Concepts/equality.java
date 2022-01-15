@@ -5,5 +5,6 @@ public class equality {
     {
         String s1=new String("durga");
         System.out.println(s1==null);
+        System.out.println(true&false);
     }
 }

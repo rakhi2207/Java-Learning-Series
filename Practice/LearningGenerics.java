@@ -5,7 +5,7 @@ package Practice;
 import java.io.IOException;
 import java.lang.reflect.Method;
 
-class Printer
+class Printer<X,Y>
 {
     //Write your code here
 

@@ -2,9 +2,7 @@ package AJava;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.util.Objects;
+
 
 public class login {
     public static void main(String[] args)
