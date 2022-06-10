@@ -5,7 +5,7 @@ import java.util.HashMap;
 public class S1 {
     public static void main(String[] args)
     {
-        int[] a={8,1,4,7,3,2,5,6,9};
+        int[] a={8,1,4,7,3,2,5,10,9};
         int i=1;
         HashMap<Integer,Integer> h=new HashMap<>();
         for(int x=0;x<a.length;x++)

@@ -1,23 +1,31 @@
-import java.util.ArrayList;
-
-
-class sys
-{
-    int x=10;
-}
-class ch extends sys
-{
-    final int x=20;
-    public int getX()
-    {
-        return x;
-    }
-}
+import java.util.Scanner;
 
 public class check
 {
     public static void main(String[] args) {
-        System.out.println(new ch().getX());
-        System.out.println(new ch().x);
+        Scanner scan=new Scanner(System.in);
+        int input;
+        input= scan.nextInt();;
+        for(int j=1;j<=input;j++)
+        {
+            System.out.print("*");
+        }
+        System.out.println();
+        for(int j=1;j<=input;j++)
+        {
+            if(j==1||j==5)
+            {
+                System.out.print("*");
+            }else
+            {
+                System.out.print("");
+            }
+        }
+        System.out.println();
+        for(int j=1;j<=input;j++)
+        {
+            System.out.print("*");
+        }
+        System.out.println();
     }
 }

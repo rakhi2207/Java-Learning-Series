@@ -37,4 +37,36 @@ public class Anagram{
             System.out.println("Strings are not anagram");
         }
     }
+
+    public static class BeautifulFunction {
+        public static void main(String[] args) {
+            Scanner scan=new Scanner(System.in);
+            String s=scan.nextLine();
+            int count=0;
+            while(s.length()>1)
+            {
+                Integer val=Integer.parseInt(s);
+                //System.out.println("check "+val+" "+count);
+                count++;
+                val++;
+                s=val.toString();
+                int i=s.length()-1;
+                while(i>=0)
+                {
+                    //System.out.println(s.charAt(i));
+                    if(s.charAt(i)=='0')
+                    {
+                        i--;
+                    }else
+                    {
+                        break;
+                    }
+                }
+                //System.out.println("i is "+i);
+                s=s.substring(0,i+1);
+            }
+
+            System.out.println(count+9);
+        }
+    }
 }
