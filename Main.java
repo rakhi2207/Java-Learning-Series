@@ -1,32 +1,52 @@
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.Statement;
-
-class Vehicle{
-    void print(){
-        System.out.print("Vehicle class");
-    }
-}
-class Car extends Vehicle{
-    void print(){
-        System.out.print("Car class ");
-    }
-}
+import java.io.*;
+import java.util.*;
 
 public class Main {
-    public static void main(String[] args) throws IOException {
-        Vehicle obj1 = new Car();
-        obj1.print();
 
-        Vehicle obj2 = new Vehicle();
-        obj2.print();
-//        try(FileReader f=new FileReader("abc.txt");)
-//        {
-//
-//        }
+    static class Pair implements Comparable<Pair>
+    {
+        int weight;
+        int prize;
+        Double ratio;
+        Pair(int weight,int prize,Double ratio)
+        {
+            this.weight=weight;
+            this.prize=prize;
+            this.ratio=ratio;
+        }
+
+        public int compareTo(Pair p)
+        {
+            return (int)(p.ratio-this.ratio);
+        }
+    }
+    public static void main(String[] args) throws Exception {
+        Scanner scan=new Scanner(System.in);
+        int n=scan.nextInt();
+        int[] weight=new int[n];
+        int[] prize=new int[n];
+        for(int i=0;i<n;i++)
+        {
+            prize[i]=scan.nextInt();
+        }
+        for(int i=0;i<n;i++)
+        {
+            weight[i]=scan.nextInt();
+        }
+
+
+        int cap=scan.nextInt();
+
+        PriorityQueue<Pair> q=new PriorityQueue<>(Collections.reverseOrder());
+        for(int i=0;i<n;i++)
+        {
+            q.offer(new Pair(weight[i],prize[i],prize[i]+0.0/weight[i]+0.0));
+        }
+        int ans=0;
+
+        for(Pair p:q)
+        {
+            System.out.println(p.weight+" "+p.prize+" "+p.ratio);
+        }
     }
 }

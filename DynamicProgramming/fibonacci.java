@@ -13,6 +13,7 @@ public class fibonacci {
         {
             return arr[n];
         }
+        System.out.println("Hello "+n);
         int f1=fib(n-1,arr);
         int f2=fib(n-2,arr);
         int ans=f1+f2;
