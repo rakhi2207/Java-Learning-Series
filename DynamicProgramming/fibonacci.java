@@ -5,20 +5,17 @@ import java.util.Scanner;
 public class fibonacci {
     public static int fib(int n,int[] arr)
     {
-        if(n==0||n==1)
-        {
-            return n;
-        }
-        if(arr[n]!=0)
-        {
-            return arr[n];
-        }
-        System.out.println("Hello "+n);
-        int f1=fib(n-1,arr);
-        int f2=fib(n-2,arr);
-        int ans=f1+f2;
-        arr[n]=ans;
-        return ans;
+       if(n==0||n==1)
+       {
+           return n;
+       }
+       if(arr[n]!=0)
+       {
+           return arr[n];
+       }
+       int val=fib(n-1,arr)+fib(n-2,arr);
+       arr[n]=val;
+       return val;
     }
 
     public static void main(String[] args) {

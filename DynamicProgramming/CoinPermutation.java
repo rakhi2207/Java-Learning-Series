@@ -14,15 +14,15 @@ public class CoinPermutation {
         int sum=scan.nextInt();
         int[] dp=new int[sum+1];
         dp[0]=1;
-        for(int j=1;j<=sum;j++)
-        {
-            for(int i=0;i<n;i++)
+            for(int j=1;j<dp.length;j++)
             {
+                for(int i=0;i<arr.length;i++) {
                 if(j>=arr[i])
+                {
                     dp[j]+=dp[j-arr[i]];
+                }
             }
         }
-
         System.out.println(dp[sum]);
     }
 }
